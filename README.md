@@ -107,7 +107,7 @@ CALCULATE(
 
 ## 📊 Dashboard Preview
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bi-crafter/Swiggy-Sales-Dashboard/main/assets/dashboard.png" width="900">
+  <img src="https://raw.githubusercontent.com/bi-crafter/Swiggy-Sales-Dashboard/main/assets/assets/Screenshot 2025-11-26 172359.png">
 </p>
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/851c82da-14ff-40d3-8f71-54cce9292823" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/assets/Screenshot 2025-11-26 172359.png" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/63b371d9-af19-46ae-9e00-d77e049ad8a9" />
