@@ -105,8 +105,11 @@ CALCULATE(
 🔸 Restaurant Quality Scorecard
 🔸 Avg Rating Trend
 
+## 📊 Dashboard Preview
 
-[Dashboard Preview]<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/691b0708-8406-4aef-8fe7-8c754128c747" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/691b0708-8406-4aef-8fe7-8c754128c747" width="850">
+</p>
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/851c82da-14ff-40d3-8f71-54cce9292823" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/63b371d9-af19-46ae-9e00-d77e049ad8a9" />
