@@ -1,9 +1,9 @@
-# 🚀 Swiggy Sales Performance Dashboard
+# 🚀 Sales Performance Dashboard
 
-**A professional Power BI project** that analyzes sales, customer experience, and operational performance for a simulated **Swiggy Food Delivery** dataset.
+**A professional Power BI project** that analyzes sales, customer experience, and operational performance for a simulated **Food Delivery** dataset.
 
 This repository contains:
-- 📌 `Swiggy_Dashboard.pbix` — Main Power BI report
+- 📌 `Food_Delivery_Dashboard.pbix` — Main Power BI report
 - 🗂️ Star schema data model
 - 🧮 Key DAX measures for business KPIs
 - 🗺️ Optional custom GeoJSON for India state analysis
@@ -28,9 +28,9 @@ This repository contains:
 
 | Component | Setting (example) |
 |-----------|-------------------|
-| Server Name | `YOUR_SERVER_NAME` (e.g., `DESKTOP-ABC\SQLEXPRESS`) |
+| Server Name | `(DESKTOP-ABHIJIT\SQLEXPRESS`) |
 | Database | `SwiggyDB` |
-| Mode | **Import** (recommended for performance) |
+
 
 🔗 **How to connect in Power BI:**
 > `Home` → `Get Data` → `SQL Server` → enter server & database → choose tables.
