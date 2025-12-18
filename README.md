@@ -111,3 +111,6 @@ CALCULATE(
 </p>
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/Screenshot 2025-11-26 172359.png" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/63b371d9-af19-46ae-9e00-d77e049ad8a9" />
+
+<img width="1087" height="589" alt="image" src="https://github.com/user-attachments/assets/cd35877f-4097-4d8a-a028-758d8cc047cb" />
+
