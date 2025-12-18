@@ -3,22 +3,23 @@
 **A professional Power BI project** that analyzes sales, customer experience, and operational performance for a simulated **Food Delivery** dataset.
 
 This repository contains:
-- 📌 `Food_Delivery_Dashboard.pbix` — Main Power BI report
-- 🗂️ Star schema data model
-- 🧮 Key DAX measures for business KPIs
-- 🗺️ Optional custom GeoJSON for India state analysis
-- 🎨 (Coming soon) Dark Neon Power BI theme file
+
+* 📌 `Food_Delivery_Dashboard.pbix` — Main Power BI report
+* 🗂️ Star schema data model
+* 🧮 Key DAX measures for business KPIs
+* 🗺️ Optional custom GeoJSON for India state analysis
+* 🎨 (Coming soon) Dark Neon Power BI theme file
 
 ---
 
 ## 🎯 Project Goals
 
-| Objective | Description |
-|-----------|-------------|
-| 💰 **Revenue Tracking** | Track sales volume, revenue trends and growth % |
+| Objective                   | Description                                           |
+| --------------------------- | ----------------------------------------------------- |
+| 💰 **Revenue Tracking**     | Track sales volume, revenue trends and growth %       |
 | 🧠 **Operational Insights** | Identify best & worst performing restaurants & dishes |
-| ⭐ **Customer Experience** | Monitor ratings and detect quality issues |
-| 🗺️ **Geographic Analysis** | Identify key high-revenue cities/states |
+| ⭐ **Customer Experience**   | Monitor ratings and detect quality issues             |
+| 🗺️ **Geographic Analysis** | Identify key high-revenue cities/states               |
 
 ---
 
@@ -26,26 +27,26 @@ This repository contains:
 
 ### 1️⃣ SQL Server Data Source
 
-| Component | Setting (example) |
-|-----------|-------------------|
-| Server Name | `(DESKTOP-ABHIJIT\SQLEXPRESS`) |
-| Database | `SwiggyDB` |
-
+| Component   | Setting (example)              |
+| ----------- | ------------------------------ |
+| Server Name | `(DESKTOP-ABHIJIT\SQLEXPRESS)` |
+| Database    | `SwiggyDB`                     |
 
 🔗 **How to connect in Power BI:**
+
 > `Home` → `Get Data` → `SQL Server` → enter server & database → choose tables.
 
 ---
 
 ### 2️⃣ Star Schema Data Model (Power BI)
 
-| Table Type | Table Name | Description |
-|------------|------------|-------------|
-| 📌 **Fact** | `fact_swiggy_orders` | Transactions + Ratings + Prices |
-| 🕓 **Dim Date** | `dim_date` | Date hierarchy for DAX |
-| 🏙️ **Dim Location** | `dim_location` | State → City mapping |
-| 🍽️ **Dim Restaurant** | `dim_restaurant` | Restaurant attributes |
-| 🍴 **Dim Dish** | `dim_dish_name`, `dim_category` | Dish & category definitions |
+| Table Type             | Table Name                      | Description                     |
+| ---------------------- | ------------------------------- | ------------------------------- |
+| 📌 **Fact**            | `fact_swiggy_orders`            | Transactions + Ratings + Prices |
+| 🕓 **Dim Date**        | `dim_date`                      | Date hierarchy for DAX          |
+| 🏙️ **Dim Location**   | `dim_location`                  | State → City mapping            |
+| 🍽️ **Dim Restaurant** | `dim_restaurant`                | Restaurant attributes           |
+| 🍴 **Dim Dish**        | `dim_dish_name`, `dim_category` | Dish & category definitions     |
 
 > ⚠️ Mark `dim_date` as **Date Table** for Time Intelligence measures.
 
@@ -54,16 +55,23 @@ This repository contains:
 ## 🧹 Data Preparation (Power Query)
 
 Common transformations performed:
-- 🔤 Trim & standardize case for cities, restaurants
-- 💰 Set correct numeric types (currency, decimals)
-- ⭐ Remove/ignore zero or null ratings for accuracy
-- 🌍 Standardize state names for mapping accuracy
+
+* 🔤 Trim & standardize case for cities, restaurants
+* 💰 Set correct numeric types (currency, decimals)
+* ⭐ Remove/ignore zero or null ratings for accuracy
+* 🌍 Standardize state names for mapping accuracy
 
 📌 **Example: Trim + Proper Case for City**
+
 ```m
 = Table.TransformColumns(Source, {{"City", each Text.Proper(Text.Trim(_)), type text}})
+```
 
+---
 
+## 🧮 Key DAX Measures
+
+```DAX
 -- Total Revenue
 [Total Revenue] =
 SUM('fact_swiggy_orders'[Price_INR])
@@ -90,27 +98,36 @@ CALCULATE(
     AVERAGE('fact_swiggy_orders'[Rating]),
     FILTER('fact_swiggy_orders', 'fact_swiggy_orders'[Rating] > 0)
 )
+```
 
+---
 
-📊 Dashboard Overview
-📍 Report 1: Sales Performance Summary
+## 📊 Dashboard Overview
 
-🔹 KPIs (Revenue, Orders, AOV, MoM%)
-🔹 Revenue Trend over Time
-🔹 Map of Revenue by State/City
+### 📍 Report 1: Sales Performance Summary
 
-⭐ Report 2: Customer Experience & Quality
+* 🔹 KPIs (Revenue, Orders, AOV, MoM%)
+* 🔹 Revenue Trend over Time
+* 🔹 Map of Revenue by State/City
 
-🔸 Rating Distribution (1–5 Star)
-🔸 Restaurant Quality Scorecard
-🔸 Avg Rating Trend
+### ⭐ Report 2: Customer Experience & Quality
+
+* 🔸 Rating Distribution (1–5 Star)
+* 🔸 Restaurant Quality Scorecard
+* 🔸 Avg Rating Trend
+
+---
 
 ## 📊 Dashboard Preview
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bi-crafter/Swiggy-Sales-Dashboard/main/assets/Screenshot 2025-11-26 172359.png">
+  <img width="1920" height="1080" alt="Sales Operations Summary" src="https://github.com/user-attachments/assets/012b5356-a37a-49ca-b811-eff0d0b1cc65" />
 </p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bi-crafter/Swiggy-Sales-Dashboard/main/assets/Screenshot 2025-11-26 172359.png" />
+</p>
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/Screenshot 2025-11-26 172359.png" />
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/63b371d9-af19-46ae-9e00-d77e049ad8a9" />
-
-<img width="1087" height="589" alt="image" src="https://github.com/user-attachments/assets/cd35877f-4097-4d8a-a028-758d8cc047cb" />
-
